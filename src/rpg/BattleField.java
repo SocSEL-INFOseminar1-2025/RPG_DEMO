@@ -6,18 +6,18 @@ import rpg.character.monster.MonsterParty;
 
 public class BattleField {
 	public String battle(HeroParty heros, MonsterParty monsters) {
-		// 敵の画面表示
+		// enemy dispay
 		AbstractCharacter[] monsterMembers = monsters.getMembers();
 		for (AbstractCharacter m : monsterMembers) {
-			System.out.print(m.getName() + "　");
+			System.out.print(m.getName() + " ");
 		}
-		System.out.println("があらわれた");
+		System.out.println("縺後≠繧峨ｏ繧後◆");
 		
-		// 戦闘開始
+		// battle start
 		while (true) {
 			monsters.printPartyStatus();
 			System.out.println();
-			System.out.println("勇者のターン");
+			System.out.println("蜍�閠�縺ｮ繧ｿ繝ｼ繝ｳ");
 			heros.printPartyStatus();
 			heros.turn(monsters);
 			if(monsters.isAllDead()){
@@ -27,7 +27,7 @@ public class BattleField {
 			}
 			
 			System.out.println();
-			System.out.println("モンスターのターン");
+			System.out.println("繝｢繝ｳ繧ｹ繧ｿ繝ｼ縺ｮ繧ｿ繝ｼ繝ｳ");
 			monsters.turn(heros);
 			if(heros.isAllDead()){
 				return "LOSE";

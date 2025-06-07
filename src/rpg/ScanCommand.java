@@ -3,9 +3,10 @@ package rpg;
 import java.util.Scanner;
 
 /**
- * キーボードから値を読み込むクラス
- * 数値以外が入力された場合，もう一度入力をやり直させる
- *
+ * 
+ * Class for reading input from the keyboard
+ * Any input other than numbers will be redone.
+ * 
  */
 public class ScanCommand {
 	private static Scanner scan= new Scanner(System.in);
@@ -16,7 +17,7 @@ public class ScanCommand {
 				int command = scan.nextInt();
 				return command;
 			} catch(Exception e){
-				System.out.println("正しい値を入力してください");
+				System.out.println("Please enter valid value");
 				scan.next();
 			}
 		}
@@ -29,7 +30,7 @@ public class ScanCommand {
 			if (command == choiceA || command == choiceB) {
 				break;
 			} else {
-				System.out.println("適切な値を入力してください");
+				System.out.println("Please enter the appropriate value.");
 			}
 		}
 		

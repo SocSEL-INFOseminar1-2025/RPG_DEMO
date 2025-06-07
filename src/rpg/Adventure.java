@@ -9,39 +9,39 @@ import rpg.character.hero.job.Priest;
 import rpg.character.hero.job.Sorcerer;
 import rpg.character.hero.job.Warrior;
 
-// ƒQ[ƒ€ŠJnˆ—‚ğs‚¤ƒNƒ‰ƒX
+// Class for starting the game
 public class Adventure {
 	private static Scanner s = new Scanner(System.in);
 	
 	public static void start() {
-		// —EÒƒp[ƒeƒBì¬
-		// ƒp[ƒeƒBƒƒ“ƒo[”
+		// create hero party
+		// the number of party member
 		final int MEMBERNUM = 3;
 		
 		Hero[] heros = new Hero[MEMBERNUM];
-		System.out.println("ƒp[ƒeƒBƒƒ“ƒo[‚ğ" + MEMBERNUM + "lW‚ß‚Ü‚µ‚å‚¤");
+		System.out.println("ãƒ‘ãƒ¼ãƒ†ã‚£ãƒ¼ãƒ¡ãƒ³ãƒãƒ¼ã‚’" + MEMBERNUM + "äººé›†ã‚ã¾ã—ã‚‡ã†");
 
 		heros = setMember(heros);		
-		System.out.println("ƒp[ƒeƒBƒƒ“ƒo‚ªW‚Ü‚è‚Ü‚µ‚½I–`Œ¯‚ğŠJn‚µ‚Ü‚·");
+		System.out.println("ãƒ‘ãƒ¼ãƒ†ã‚£ãƒ¼ãƒ¡ãƒ³ãƒãƒ¼ãŒé›†ã¾ã‚Šã¾ã—ãŸï¼å†’é™ºã‚’å§‹ã‚ã¾ã™");
 		HeroParty party = new HeroParty(heros);
 		
-		// ‚Í‚¶‚Ü‚è‚Ì’¬‚©‚çƒQ[ƒ€ŠJn
+		// game start from town
 		Town town = new Town();
 		town.access(party);
 	}
 	
-	// ƒp[ƒeƒBƒƒ“ƒo‚Ì–¼‘O‚Æ–ğE‚ğİ’è‚·‚éƒƒ\ƒbƒh
+	// Method for setting member names and jobs
 	private static Hero[] setMember(Hero[] heros) {
 		int job;
 		String name;
 		
 		for(int i = 0; i < heros.length; i++) {
-			System.out.println(i+1 + "l–Ú‚Ìƒp[ƒeƒBƒƒ“ƒo[‚Ì–¼‘O‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+			System.out.println(i+1 + "äººç›®ã®ãƒ‘ãƒ¼ãƒ†ã‚£ãƒ¼ãƒ¡ãƒ³ãƒãƒ¼ã®åå‰ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
 			name = s.next();
 			
 			while(true) {
-				System.out.println(name + "‚Ì–ğE‚ğ‘I‘ğ‚µ‚Ä‰º‚³‚¢");
-				System.out.println("0Fím 1F‘m—µ 2F–‚–@g‚¢@‚»‚Ì‘¼‚Ì”šFŠe–ğE‚ÌÚ×");
+				System.out.println(name + "ã®å½¹è·ã‚’é¸æŠã—ã¦ãã ã•ã„");
+				System.out.println("0:æˆ¦å£« 1:åƒ§ä¾¶ 2:é­”æ³•ä½¿ã„ ãã®ä»–:å„å½¹è·ã®è©³ç´°");
 				job = ScanCommand.scan();
 				
 				switch(job) {
@@ -68,11 +68,11 @@ public class Adventure {
 		return heros;
 	}
 	
-	// –ğE‚Ìà–¾‚ğ•\¦‚·‚éƒƒ\ƒbƒh
+	// Method for displaying job descriptions
 	private static void printJob() {
-		System.out.println("ímFUŒ‚—Í‚ªÅ‚à‚‚­C•KE‹Z‚Ìƒhƒ‰ƒSƒ“ƒLƒbƒN‚Íƒhƒ‰ƒSƒ“‚É‘åƒ_ƒ[ƒW‚ğ—^‚¦‚é");
-		System.out.println("‘m—µF•KE‹Zƒq[ƒ‹‚Í–¡•û‘Sˆõ‚ğ‰ñ•œ‚·‚é");
-		System.out.println("–‚–@g‚¢F•KE‹Zƒtƒ@ƒCƒA‚Í‘Šè‘S‘Ì‚Éƒ_ƒ[ƒW‚ğ—^‚¦‚é");
+		System.out.println("æˆ¦å£«ï¼šæ”»æ’ƒåŠ›ãŒæœ€ã‚‚é«˜ã„ï¼å¿…æ®ºæŠ€ãƒ‰ãƒ©ã‚´ãƒ³ã‚­ãƒƒã‚¯ã¯ãƒ‰ãƒ©ã‚´ãƒ³ã«å¤§ãƒ€ãƒ¡ãƒ¼ã‚¸");
+		System.out.println("åƒ§ä¾¶ï¼šæ”»æ’ƒåŠ›ãŒæœ€ã‚‚ä½ã„ï¼å¿…æ®ºæŠ€ãƒ’ãƒ¼ãƒ«ã¯å‘³æ–¹å…¨å“¡ã‚’å›å¾©ã™ã‚‹");
+		System.out.println("é­”æ³•ä½¿ã„ï¼šé­”æ³•ãŒä½¿ãˆã‚‹ï¼å¿…æ®ºæŠ€ãƒ•ã‚¡ã‚¤ã‚¢ã¯ç›¸æ‰‹å…¨ä½“ã«ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆã‚‹");
 		System.out.println();
 	}
 	
