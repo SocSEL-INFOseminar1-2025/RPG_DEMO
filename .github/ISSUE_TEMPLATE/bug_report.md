@@ -1,38 +1,26 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+title: バグ報告内容 [報告者名]
+labels: bug
+assignees: kzk03
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+# 観察される振る舞い（現状）
+  テキストまたはスクリーンショット
+<br>
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+# 期待される振る舞い（期待）
+<br>
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+# 再現方法
+<br>
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+## その他（空白でも可）
+<br>
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+## 最終チェックリスト
+- [ ] 適切なタイトルが付けられていますか
+- [ ] アサインしたか
+- [ ] 適切なラベルをつけましたか
