@@ -1,20 +1,26 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+title: 機能追加内容 [報告者名]
+labels: enhancement
+assignees: kzk03
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+# 観察される振る舞い（現状）
+  テキストまたはスクリーンショット
+<br>
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+# 期待される振る舞い（期待）
+<br>
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+# 実装方針
+<br>
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## その他（空白でも可）
+<br>
+
+## 最終チェックリスト
+- [ ] 適切なタイトルが付けられていますか
+- [ ] アサインしたか
+- [ ] 適切なラベルをつけましたか
