@@ -3,7 +3,7 @@ name: Feature request
 about: Suggest an idea for this project
 title: 機能追加内容 [報告者名]
 labels: enhancement
-assignees: kzk03
+assignees: OTOYO1020
 
 ---
 
