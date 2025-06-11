@@ -4,28 +4,28 @@ import rpg.character.monster.Monster;
 import rpg.character.monster.monster.BabyDragon;
 import rpg.character.monster.monster.Dragon;
 
-/*DungeonƒNƒ‰ƒX‚ğŒp³ ƒ_ƒ“ƒWƒ‡ƒ“İ’èiŠK‘w–¼EoŒ»ƒ‚ƒ“ƒXƒ^[‚È‚Çj‚ğ‹ï‘Ì‰»*/
+/*Dungeonã‚¯ãƒ©ã‚¹ã‚’ç¶™æ‰¿ ãƒ€ãƒ³ã‚¸ãƒ§ãƒ³è¨­å®šï¼ˆéšå±¤åãƒ»å‡ºç¾ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ãªã©ï¼‰ã‚’å…·ä½“åŒ–*/
 public class Dungeon1st extends Dungeon {
 	public Dungeon1st() {
-		this.name = "ƒhƒ‰ƒSƒ“‚Ì‘ƒŒA";
+		this.name = "ãƒ‰ãƒ©ã‚´ãƒ³ã®å·£çªŸ";
 		this.floorNum = 1;
 		this.encountCounter = 0;
 	}
 	
-	// DungeonƒNƒ‰ƒX‚©‚ç
+	// Dungeonã‚¯ãƒ©ã‚¹ã‹ã‚‰
 	@Override
 	protected Monster nextBoss() {
 		Dragon boss1st = new Dragon();
 		return boss1st;
 	}
-	// DungeonƒNƒ‰ƒX‚©‚ç
+	// Dungeonã‚¯ãƒ©ã‚¹ã‹ã‚‰
 	@Override
 	protected Monster nextMob(int i) {
 		BabyDragon mob1st = new BabyDragon(i);
 		return mob1st;
 	}
 
-	// DungeonƒNƒ‰ƒX‚©‚ç
+	// Dungeonã‚¯ãƒ©ã‚¹ã‹ã‚‰
 	@Override
 	protected Area nextArea() {
 		Dungeon2nd dungeon2 = new Dungeon2nd();
